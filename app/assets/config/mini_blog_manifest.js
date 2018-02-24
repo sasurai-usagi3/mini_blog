@@ -1,2 +1,2 @@
-//= link_directory ../javascripts/mini/blog .js
-//= link_directory ../stylesheets/mini/blog .css
+//= link_directory ../javascripts/mini_blog .js
+//= link_directory ../stylesheets/mini_blog .css

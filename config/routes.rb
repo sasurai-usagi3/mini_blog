@@ -1,2 +1,2 @@
-Mini::Blog::Engine.routes.draw do
+MiniBlog::Engine.routes.draw do
 end

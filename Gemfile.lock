@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mini-blog (0.1.0)
+    mini_blog (0.1.0)
       carrierwave
       rails (~> 5.1.5)
 
@@ -146,7 +146,7 @@ PLATFORMS
 
 DEPENDENCIES
   factory_bot_rails
-  mini-blog!
+  mini_blog!
   mysql2
   rspec-rails
   shoulda-matchers

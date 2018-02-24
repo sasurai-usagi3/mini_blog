@@ -1,4 +1,4 @@
-# Mini::Blog
+# MiniBlog
 Short description and motivation.
 
 ## Usage
@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'mini-blog'
+gem 'mini_blog'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install mini-blog
+$ gem install mini_blog
 ```
 
 ## Contributing

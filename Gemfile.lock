@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     mini-blog (0.1.0)
+      carrierwave
       rails (~> 5.1.5)
 
 GEM
@@ -46,6 +47,10 @@ GEM
       tzinfo (~> 1.1)
     arel (8.0.0)
     builder (3.2.3)
+    carrierwave (1.2.2)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
     diff-lcs (1.3)
@@ -65,6 +70,9 @@ GEM
     mail (2.7.0)
       mini_mime (>= 0.1.1)
     method_source (0.9.0)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)

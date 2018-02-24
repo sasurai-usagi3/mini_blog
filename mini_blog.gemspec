@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 5.1.5'
   s.add_dependency 'carrierwave'
   s.add_dependency 'devise'
+  s.add_dependency 'slim-rails'
 
   s.add_development_dependency 'mysql2'
   s.add_development_dependency 'rspec-rails'

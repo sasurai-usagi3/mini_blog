@@ -1,4 +1,5 @@
-require "mini/blog/engine"
+require 'mini/blog/engine'
+require 'carrierwave'
 
 module Mini
   module Blog

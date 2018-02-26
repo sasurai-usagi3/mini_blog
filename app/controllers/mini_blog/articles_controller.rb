@@ -5,7 +5,7 @@ module MiniBlog
     before_action :authenticate_user!, except: :index
 
     def index
-      @articles = Article.all
+      @articles = Article.page(params[:page]).per(10)
     end
 
     def show

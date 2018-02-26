@@ -50,7 +50,7 @@ module MiniBlog
 
   private
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body).merge(tags: params[:article][:tags].split(/;\s*/).map { |tag| MiniBlog::Tag.find_or_initialize_by(name: tag) })
     end
   end
 end

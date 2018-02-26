@@ -1,0 +1,12 @@
+ul
+  - @articles.each do |article|
+    li
+      h2
+        = article.title
+      div
+        ul
+          - article.tags.each do |tag|
+            li
+              = tag.name
+        = article.created_at
+      div

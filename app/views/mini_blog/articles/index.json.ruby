@@ -2,6 +2,7 @@
   {
     id: article.id,
     title: article.title,
+    tags: article.tags.pluck(:name),
     created_at: article.created_at,
     updated_at: article.created_at
   }

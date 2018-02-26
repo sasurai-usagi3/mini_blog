@@ -1,4 +1,5 @@
 = form_with model: article do |f|
   = f.text_field :title
   = f.text_area :body
+  = text_field :article, :tags, value: article.tags.pluck(:name).join('; ')
   = f.submit

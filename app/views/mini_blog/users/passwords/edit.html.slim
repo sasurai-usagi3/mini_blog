@@ -1,0 +1,22 @@
+h2
+  | Change your password
+= form_with model: resource, url: user_password_path, html: {method: :put}, local: true do |f|
+  = devise_error_messages!
+  = f.hidden_field :reset_password_token
+  .form-group
+    = f.label :password, 'New password'
+    br
+    - if @minimum_password_length
+      em
+        | (
+        = @minimum_password_length
+        |  characters minimum)
+      br
+    = f.password_field :password, autofocus: true, autocomplete: 'off', class: 'form-controller'
+  .field
+    = f.label :password_confirmation, 'Confirm new password'
+    br
+    = f.password_field :password_confirmation, autocomplete: 'off'
+  button.btn.btn-outline-success
+    | Send me reset password instructions
+= render 'mini_blog/users/shared/links'

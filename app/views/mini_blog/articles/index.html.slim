@@ -1,13 +1,14 @@
 ul
   - @articles.each do |article|
-    li
-      h2
-        = article.title
-      div
+    li.card
+      .card-header
+        h2
+          = "#{l(article.created_at)} #{article.title}"
         ul
           - article.tags.each do |tag|
-            li
+            li.badge.badge-dark.tag
               = tag.name
-        = article.created_at
-      div
-= paginate @articles
+      article.article.card-body.collapse*{id: "article-#{article.id}", 'data-id': article.id}
+      button.btn.btn-link.btn-sm.text-left data-toggle="collapse" href="#article-#{article.id}" role="button" aria-expanded="false" aria-controls="article-#{article.id}"
+        | open...
+= paginate @articles, theme: :bootstrap4

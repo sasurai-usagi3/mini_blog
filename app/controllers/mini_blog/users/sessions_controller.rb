@@ -3,6 +3,7 @@
 module MiniBlog
   module Users
     class SessionsController < Devise::SessionsController
+      layout 'mini_blog/application'
       # before_action :configure_sign_in_params, only: [:create]
 
       # GET /resource/sign_in

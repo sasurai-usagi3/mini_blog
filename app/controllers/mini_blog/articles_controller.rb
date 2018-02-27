@@ -2,10 +2,10 @@ require_dependency 'mini_blog/application_controller'
 
 module MiniBlog
   class ArticlesController < ApplicationController
-    before_action :authenticate_user!, except: :index
+    before_action :authenticate_user!, except: [:index, :show]
 
     def index
-      @articles = Article.page(params[:page]).per(10)
+      @articles = Article.includes(:tags).page(params[:page]).per(10)
     end
 
     def show

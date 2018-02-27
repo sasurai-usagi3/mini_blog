@@ -10,4 +10,18 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery3
+//= require jquery_ujs
+//= require popper
+//= require bootstrap-sprockets
 //= require_tree .
+
+window.addEventListener('load', () => {
+  $('.article').on('show.bs.collapse', e => {
+    const target = e.currentTarget;
+    const articleId = target.dataset.id;
+    target.textContent = 'loading...';
+
+    fetch(`/articles/${articleId}.json`).then(r => r.json()).then(r => target.innerHTML = r.body).catch(() => console.log('error'));
+  });
+});

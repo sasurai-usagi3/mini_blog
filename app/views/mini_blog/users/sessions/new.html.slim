@@ -1,0 +1,17 @@
+h2
+  | Log in
+= form_with model: resource, url: user_session_path, local: true do |f|
+  .form-group
+    = f.label :email
+    = f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control'
+  .form-group
+    = f.label :password
+    br
+    = f.password_field :password, autocomplete: 'off', class: 'form-control'
+  - if devise_mapping.rememberable?
+    .form-group
+      = f.check_box :remember_me
+      = f.label :remember_me
+  button.btn.btn-outline-success
+    | Sign in
+= render 'mini_blog/users/shared/links'

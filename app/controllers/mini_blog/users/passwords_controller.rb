@@ -3,6 +3,7 @@
 module MiniBlog
   module Users
     class PasswordsController < Devise::PasswordsController
+      layout 'mini_blog/application'
       # GET /resource/password/new
       # def new
       #   super

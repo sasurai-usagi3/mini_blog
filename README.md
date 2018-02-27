@@ -24,7 +24,7 @@ $ gem install mini_blog
 To create user, in `seeds.rb`.And `rails db:seed`
 
 ```rb:seeds.rb
-User.create(email: 'yours@example.com', password: 'password', name: 'name')
+MiniBlog::User.create(email: 'yours@example.com', password: 'password', name: 'name')
 ```
 
 ## Contributing

@@ -45,7 +45,7 @@ module MiniBlog
 
       article.destroy
 
-      head :accepted
+      redirect_to root_path
     end
 
   private

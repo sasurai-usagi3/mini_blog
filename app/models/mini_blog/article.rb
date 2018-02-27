@@ -5,5 +5,6 @@ module MiniBlog
 
     validates :title, presence: true
     validates :body, presence: true
+    validates :status, presence: true
   end
 end

@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20180224113006) do
   create_table "mini_blog_articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title", null: false
     t.text "body", null: false
+    t.integer "status", limit: 1, default: 0, null: false
+    t.string "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
